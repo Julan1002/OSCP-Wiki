@@ -1,0 +1,211 @@
+/* Styles pour la barre de chargement */
+.loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #4CAF50; /* Couleur de la barre de chargement */
+    z-index: 1000; /* Assure que la barre est au-dessus de tout le contenu */
+    transition: width 0.5s ease; /* Transition de la largeur */
+    display: none; /* Par défaut, la barre de chargement est cachée */
+}
+
+/* Styles généraux inchangés */
+/* Reset CSS pour une réinitialisation simple */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte blanc */
+    padding: 20px;
+    position: relative; /* Position relative pour le contenu principal */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out; /* Animation de fade in */
+}
+
+#logo {
+    width: 150px; /* Taille du logo ajustée */
+    height: auto;
+    margin-bottom: 10px;
+    animation: spin 4s linear infinite; /* Animation de rotation infinie */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+    animation: slideInRight 1s ease-out; /* Animation de slide in depuis la droite */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+    animation: fadeIn 1s ease-out; /* Animation de fade in */
+}
+
+nav ul li {
+    margin: 0 10px;
+    animation: scaleIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Animation de zoom in */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: #555;
+    transition: background-color 0.3s ease;
+}
+
+main {
+    background-color: #222; /* Fond gris foncé pour le contenu */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out; /* Animation de fade in */
+}
+
+section {
+    margin-bottom: 30px;
+    animation: slideInLeft 1s ease-out; /* Animation de slide in depuis la gauche */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 5px;
+    list-style-type: none;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    animation: fadeInUp 1s ease-out; /* Animation de fade in et slide up */
+}
+
+footer p {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Effet "Top Secret" */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond noir semi-transparent */
+    z-index: -1; /* Assure que le fond est en arrière-plan */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
